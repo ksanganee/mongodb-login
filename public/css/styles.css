@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+body {
+  color: #121212;
+  font-family: 'Roboto', sans-serif;
+  width: 80%;
+  max-width: 80rem;
+  margin: 4rem auto;
+}
+
+.gradient-text {
+  background: linear-gradient(140deg, #0099ff, #f700ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#header-logo {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+nav a {
+  margin: 0.25rem;
+  padding: 0.75rem 1rem;
+  color: #121212;
+  border-radius: 4px;
+  transition: 200ms;
+}
+
+nav a:hover {
+  background-color: #ebebeb;
+}
+
+#sign-up-button {
+  background-color: #0099ff;
+  color: white;
+}
+
+#sign-up-button:hover {
+  background-color: #35aeff;
+}
+
+a {
+  text-decoration: none;
+  color: #0099ff;
+}
+
+#main-title {
+  font-size: 7rem;
+  font-weight: 900;
+  font-style: italic;
+  margin: 8rem auto;
+  line-height: .98em;
+  text-align: center;
+}
+
+.page-title {
+  font-weight: 400;
+  text-align: center;
+  font-style: italic;
+}
+
+form {
+  /* background: linear-gradient(120deg, #64b9ff, #2274e0); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  padding: 3rem;
+  width: fit-content;
+  border-radius: 4px;
+}
+
+form label {
+  display: block;
+}
+
+form input {
+  font-size: inherit;
+  font: inherit;
+  border: 2px solid #c9c9c9;
+  border-radius: 4px;
+  margin: .75rem 0;
+  padding: 1rem;
+  width: 18rem;
+  transition: 200ms;
+}
+
+form input:focus {
+  border: 2px solid #0099ff;
+  outline: none;
+}
+
+form button {
+  border: none;
+  font-size: inherit;
+  font: inherit;
+  padding: 1rem 1.25rem;
+  margin-top: 1.75rem;
+  background-color: #0099ff;
+  color: white;
+  transform: scale(1);
+  transition: 200ms;
+  border-radius: 4px;
+}
+
+form button:hover {
+  transform: scale(1.08);
+  background-color: #35aeff;
+}
+
+.form-redirect {
+  text-align: center;
+}
+
+button:hover {
+  cursor: pointer;
+}
