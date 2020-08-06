@@ -21,7 +21,7 @@ app.use(session({
   secret: 'terces',
   resave: false,
   saveUninitialized: true,
-  cookie: { maxAge: 60000 }
+  cookie: { maxAge: 1000 * 60 * 60 * 24 * 7 }
 }))
 
 app.use(passport.initialize());
