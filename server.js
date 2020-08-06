@@ -4,10 +4,8 @@ require("dotenv").config();
 const app = express()
 const passport = require('passport');
 const mongoose = require('mongoose');
-const flash = require('express-flash');
 const session = require('express-session')
 require("./config/passport-config")(passport)
-const cookieParser = require('cookie-parser');
 
 mongoose.connect(process.env.MONGOURI, { useNewUrlParser: true })
   .then(() => console.log("Connected to MongoDB"))
@@ -17,32 +15,27 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: false }));
 app.set("view engine", "hbs");
 app.engine("hbs", hbs({ extname: "hbs" }));
-
 app.use(express.json())
 
 app.use(session({
-  secret: "secret",
-  resave: true,
-  saveUninitialized: true
+  secret: 'terces',
+  resave: false,
+  saveUninitialized: true,
+  cookie: { maxAge: 60000 }
 }))
 
-app.use(cookieParser());
 app.use(passport.initialize());
 app.use(passport.session());
 
-app.use(flash());
-
-app.use((req, res, next) => {
-  res.locals.success_msg = req.flash('success_msg');
-  res.locals.success_msg = req.flash('error_msg');
-  res.locals.error = req.flash('error')
-  next();
-})
+app.set("error", "")
+app.set("info", "")
 
 app.use("/signup", require("./routes/signup.js"))
 app.use("/login", require("./routes/login.js"))
 app.use("/learn", require("./routes/learn.js"))
 app.use("/logout", require("./routes/logout.js"))
+app.use("/failed", require("./routes/failed.js"))
+app.use("/updatedb", require("./routes/updatedb"))
 
 app.get("/", (req, res) => {
   res.redirect("/login")

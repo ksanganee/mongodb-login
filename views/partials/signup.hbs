@@ -1,7 +1,12 @@
-
 <h1 class="page-title">Sign Up</h1>
 
-{{ message.error_msg }}
+{{#if data.error}}
+  <div class="error">{{ data.error }}</div>
+{{/if}}
+
+{{#if data.info}}
+<div class="info">{{ data.info }}</div>
+{{/if}}
 
 <form action="/signup" method="post">
 <div>
@@ -15,6 +20,6 @@
 <button type="submit">Sign Up</button>
 </form>
 
-<div class="form-redirect">Already have an account? <a href="/login">Login</a></div>
-
 {{ data.msg }}
+
+<div class="form-redirect">Already have an account? <a href="/login">Login</a></div>

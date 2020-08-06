@@ -1,8 +1,12 @@
 <h1 class="page-title">Login</h1>
 
-{{ data.msg }}
+{{#if data.error}}
+  <div class="error">{{ data.error }}</div>
+{{/if}}
 
-{{ error }}
+{{#if data.info}}
+<div class="info">{{ data.info }}</div>
+{{/if}}
 
 <form action="/login" method="post">
   <div>

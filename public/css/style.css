@@ -5,7 +5,16 @@ body {
   font-family: 'Roboto', sans-serif;
   width: 80%;
   max-width: 80rem;
-  margin: 4rem auto;
+  margin: auto;
+  padding-bottom: 16rem;
+}
+
+code {
+  font-family: 'Roboto Mono', monospace;
+  font-size: .9em;
+  background-color: #f3f3f3;
+  padding: .05rem .5rem;
+  border-radius: 4px;
 }
 
 .gradient-text {
@@ -15,6 +24,7 @@ body {
 }
 
 header {
+  margin: 4rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,12 +48,12 @@ nav a:hover {
   background-color: #ebebeb;
 }
 
-#sign-up-button {
+.highlight-button {
   background-color: #0099ff;
   color: white;
 }
 
-#sign-up-button:hover {
+.highlight-button:hover {
   background-color: #35aeff;
 }
 
@@ -52,11 +62,18 @@ a {
   color: #0099ff;
 }
 
+hr {
+  border-top: 1px solid #ebebeb;
+}
+
+#showcase {
+  padding: 6rem 0;
+}
+
 #main-title {
   font-size: 7rem;
   font-weight: 900;
   font-style: italic;
-  margin: 8rem auto;
   line-height: .98em;
   text-align: center;
 }
@@ -67,13 +84,20 @@ a {
   font-style: italic;
 }
 
+.sub-heading {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 6rem auto;
+  max-width: 32rem;
+}
+
 form {
   /* background: linear-gradient(120deg, #64b9ff, #2274e0); */
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
-  padding: 3rem;
+  padding: 2rem;
   width: fit-content;
   border-radius: 4px;
 }
@@ -98,7 +122,7 @@ form input:focus {
   outline: none;
 }
 
-form button {
+button {
   border: none;
   font-size: inherit;
   font: inherit;
@@ -111,7 +135,7 @@ form button {
   border-radius: 4px;
 }
 
-form button:hover {
+button:hover {
   transform: scale(1.08);
   background-color: #35aeff;
 }
@@ -122,4 +146,23 @@ form button:hover {
 
 button:hover {
   cursor: pointer;
+}
+
+.error {
+  text-align: center;
+  background-color: #ff7d7d;
+  color: #6b1717;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  margin: 1rem auto 0rem auto;
+}
+
+.info {
+  text-align: center;
+  background-color: #ebebeb;
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+  width: fit-content;
+  margin: 1rem auto 0rem auto;
 }
